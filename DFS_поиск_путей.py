@@ -34,8 +34,13 @@ all_ways = []
 DFS(graph, start, end, done, way, all_ways)
 
 if all_ways:
-    for index, p in enumerate(all_ways):
-        print(f"Путь {index + 1}: {' -> '.join(map(str, p))}")
+    number = 1  
+    for p in all_ways:
+        print("Путь", number, ":", end=' ')
+        for v in p:
+            print(v, end=' ')
+        print()  
+        number += 1  
 else:
     print("Пути не найдены")
 
